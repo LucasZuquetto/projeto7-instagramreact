@@ -1,4 +1,4 @@
-
+import React from "react";
 
 
 export default function Posts(){
@@ -17,6 +17,9 @@ export default function Posts(){
         }
     ]
 
+    const [curtida, setCurtida] = React.useState("heart-outline");
+    const [cor, setCor] = React.useState("#000000");
+
     let PostJSX = posts.map(post =>  ( <div class="post">
     <div class="topo">
         <div class="usuario">
@@ -29,13 +32,19 @@ export default function Posts(){
     </div>
 
     <div class="conteudo">
-        <img src={"assets/img/"+ post.img +".svg"} />
+        <img src={"assets/img/"+ post.img +".svg"} onClick={() => {
+                    setCurtida("heart");
+                    setCor("#ff0000");
+        }} />
     </div>
 
     <div class="fundo">
         <div class="acoes">
         <div>
-            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name={curtida} style={{color: cor}} onClick={() => {
+            (curtida === "heart-outline") ? setCurtida("heart") : setCurtida("heart-outline");
+            (cor === "#000000") ? setCor("#ff0000") : setCor("#000000");
+            }}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
