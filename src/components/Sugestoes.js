@@ -1,16 +1,16 @@
-let sugestoesObj = [{username: 'bad.vibes.memes', msg:"Segue você"},
+let sugestoesObjeto = [{username: 'bad.vibes.memes', msg:"Segue você"},
                 {username: 'chibirdart', msg:"Segue você"},
                 {username: 'razoesparaacreditar', msg:"Novo no Instagram"},
                 {username: 'adorable_animals', msg:"Segue você"},
                 {username: 'smallcutecats', msg:"Segue você"},]
 
-let sugestoes = sugestoesObj.map(sug => (
+let sugestoesJSX = sugestoesObjeto.map(suggestion => (
 <div class="sugestao">
     <div class="usuario">
-        <img src={'assets/img/' + sug.username + '.svg'} />
+        <img src={'assets/img/' + suggestion.username + '.svg'} />
         <div class="texto">
-            <div class="nome">{sug.username}</div>
-            <div class="razao">{sug.msg}</div>
+            <div class="nome">{suggestion.username}</div>
+            <div class="razao">{suggestion.msg}</div>
         </div>
     </div>
 
@@ -26,7 +26,7 @@ export default function Sugestoes() {
         <div>Ver tudo</div>
       </div>
 
-      {sugestoes}
+      {sugestoesJSX}
       
       </div>
     )

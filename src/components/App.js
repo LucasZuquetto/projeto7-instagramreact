@@ -7,7 +7,7 @@ export default function App(){
         <div>
             <Navbar />
            
-            
+            <Corpo />
 
             <Fundomobile />
         </div>
