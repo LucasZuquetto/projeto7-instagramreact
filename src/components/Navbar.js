@@ -1,6 +1,6 @@
 
 
-export default function NavBar(){
+export default function Navbar(){
     const icones = [
         "paper-plane-outline",
         "compass-outline",

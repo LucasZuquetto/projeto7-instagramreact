@@ -1,13 +1,15 @@
-import Navbar from "./components/Navbar"
-import Corpo from "./components/Corpo"
-import Fundomobile from "./components/Fundo-mobile"
+import Navbar from "./Navbar"
+import Corpo from "./Corpo"
+import Fundomobile from "./Fundomobile"
 
 export default function App(){
     return(
         <div>
             <Navbar />
-            <Corpo />
-            <Fundo-mobile />
+           
+            
+
+            <Fundomobile />
         </div>
     )
 }
